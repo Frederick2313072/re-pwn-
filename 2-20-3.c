@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc, char const *argv[])
+{
+    int flag1[] = {0x3FE, 0x3EB, 0x3EB, 0x3FB, 0x3E4, 0x3F6, 0x3D3, 0x3D0, 0x388, 0x3CA, 0x3EF, 0x389, 0x3CB, 0x3EF, 0x3CB, 0x388, 0x3EF, 0x3D5, 0x3D9, 0x3CB, 0x3D1, 0x3CD};
+    char flag[] = {};
+    for (int i = 0; i < 21; i++)
+    {
+        flag[i] = (flag1[i] - 900) ^ 0x34;
+        printf("%c", flag[i]);
+    }
+    return 0;
+}
